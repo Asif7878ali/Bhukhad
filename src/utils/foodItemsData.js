@@ -1,0 +1,64 @@
+export const data = {
+    "foodItems": [
+        {
+          "id": "aa",
+          "name": "Misal pav",
+          "price": 12.99,
+          "image": "https://cdn.tasteatlas.com//images/dishes/31581c6651644769875834e8dc60bec0.jpg?w=905&h=510"
+        },
+        {
+          "id": "bb",
+          "name": "Malai kofta",
+          "price": 9.99,
+          "image": "https://cdn.tasteatlas.com//images/dishes/7cd03979f70949c08f779a686919d7e3.jpg?w=905&h=510"
+        },
+        {
+          "id": "cc",
+          "name": "Mattar paneer",
+          "price": 7.99,
+          "image": "https://cdn.tasteatlas.com//Images/Dishes/ef2e189156f642d989e433c2af47a584.jpg?w=905&h=510"
+        },
+        {
+          "id": "dd",
+          "name": "Misal",
+          "price": 5.99,
+          "image": "https://cdn.tasteatlas.com//Images/Dishes/181106e0dc5249ac8f8089098048cc02.jpg?w=905&h=510"
+        },
+        {
+          "id": "ee",
+          "name": "Dal makhani",
+          "price": 14.99,
+          "image": "https://cdn.tasteatlas.com//images/dishes/2cbbb8c2a74541c0b03aeaaad7498ca3.jpg?w=905&h=510"
+        },
+        {
+          "id": "ff",
+          "name": "Rajma",
+          "price": 19.99,
+          "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/rajma-recipe-2.jpg"
+        },
+        {
+          "id": "gg",
+          "name": "Pav Bhaji",
+          "price": 10.99,
+          "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bambayya_Pav_bhaji.jpg"
+        },
+        {
+          "id": "hh",
+          "name": "Dal tadka",
+          "price": 4.99,
+          "image": "https://cdn.tasteatlas.com//images/dishes/617f5d93003c43a992244eff2dd52b6d.jpg?w=905&h=510"
+        },
+        {
+          "id": "ii",
+          "name": "Aaloo Tamatar",
+          "price": 8.99,
+          "image": "https://i0.wp.com/vegecravings.com/wp-content/uploads/2017/06/Aloo-Tamatar-Ki-Sabzi-Recipe-Step-By-Step-Instructions.jpg?fit=2456%2C1821&quality=65&strip=all&ssl=1"
+        },
+        {
+          "id": "jj",
+          "name": "Palak paneer",
+          "price": 11.99,
+          "image": "https://cdn.tasteatlas.com//Images/Dishes/4ecba690cc0b47809d43d70c7a6b3a39.jpg?w=905&h=510"
+        }
+      ]
+}
