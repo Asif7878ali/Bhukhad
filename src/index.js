@@ -10,6 +10,9 @@ import AddtoCard from './pages/AddtoCard';
 import FoodItemsPage from './pages/FoodItemsPage';
 import Payment from './pages/Payment';
 import AboutusPage from './pages/AboutusPage';
+import ContactPage from './pages/ContactPage';
+import PaymentSucces from './pages/PaymentSucces';
+import PaymentFailed from './pages/PaymentFailed';
 
 const appRouting = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ const appRouting = createBrowserRouter([
       {
         path : "/aboutus",
         element : <AboutusPage/>
+      },
+      {
+        path : "/contact",
+        element : <ContactPage/>
+      },
+      {
+        path : '/success',
+        element : <PaymentSucces/>
+      },
+      {
+        path : '/failed',
+        element : <PaymentFailed/>
       }
     ]
   }
