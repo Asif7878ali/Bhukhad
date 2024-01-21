@@ -101,7 +101,7 @@ const AddtoCard = () => {
                 {/* head */}
                 <thead className="bg-red-600 text-white">
                   <tr>
-                    <th>No.</th>
+                    
                     <th>Food</th>
                     <th>Items Name</th>
                     <th>Quantity</th>
@@ -111,8 +111,7 @@ const AddtoCard = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    {/* Numberofitems */}
-                    <th className="lg:w-[5rem]">{items.id}</th>
+                   
                     {/* foodimage */}
                     <td className="lg:w-[20rem]">
                       <div className="flex items-center gap-3">

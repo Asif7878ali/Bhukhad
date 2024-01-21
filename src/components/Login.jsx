@@ -57,11 +57,9 @@ const Login = () => {
           const responce = await axios.post(url, values);
           console.log("Node Responce", responce);
           const { token} = responce.data;  
-          localStorage.setItem('token',token)
-          // const token = localStorage.getItem('token')        
-          // sessionStorage.setItem('Token', JSON.stringify(token))
-         
+          sessionStorage.setItem('token',token)
           navigate("/aboutus");
+          
         } catch (error) {
           console.warn("Error during fetch:", error); 
           const {message} = error.response.data

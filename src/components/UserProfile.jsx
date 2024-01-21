@@ -1,9 +1,22 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { clearUsers } from "../slices/UserdataSlices";
+
 
 const UserProfile = () => {
   const userimage = useSelector((state) => state.loginDetail.users);
+
+   const dispatch = useDispatch()
+   const navigate = useNavigate()
+
+   const logoutuser = () => {
+       sessionStorage.removeItem('token')
+       dispatch(clearUsers())
+       navigate('/')
+       document.getElementById("my_modal_6").close()      
+   }
 
   return (
     <>
@@ -28,12 +41,14 @@ const UserProfile = () => {
                 </div>
               </div>
               <div className="flex gap-2 px-2">
-                <button className="px-20 z-30 py-2 bg-red-600 rounded-full text-white relative font-semibold font-sans after:-z-20 after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#be123c;] hover:[text-shadow:2px_2px_2px_#fda4af]">
+                <button className="lg:px-20 px-8 z-30 lg:py-2 py-2 bg-red-600 rounded-full text-white relative font-semibold font-sans after:-z-20 after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#be123c;] hover:[text-shadow:2px_2px_2px_#fda4af]">
                   Track Order
                 </button>
-                <button className="px-12 z-30 py-2 bg-red-600 rounded-full text-white relative font-semibold font-sans after:-z-20 after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#be123c;] hover:[text-shadow:2px_2px_2px_#fda4af]">
-                  Logout
-                </button>
+
+
+                <button  onClick={logoutuser}
+                 className="lg:px-12 px-8 z-30 lg:py-2 py-2 bg-red-600 rounded-full text-white relative font-semibold font-sans after:-z-20 after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#be123c;] hover:[text-shadow:2px_2px_2px_#fda4af]"> Logout </button>
+    
               </div>
             </div>
 

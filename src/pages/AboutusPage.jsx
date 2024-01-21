@@ -11,8 +11,8 @@ import { MdEmojiTransportation } from "react-icons/md";
 
 const AboutusPage = () => {
   const dispatch = useDispatch();
-  //   const token = sessionStorage.getItem('Token')
-  const token = localStorage.getItem("token");
+
+  const token = sessionStorage.getItem("token");
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Bearer ${token}`,
