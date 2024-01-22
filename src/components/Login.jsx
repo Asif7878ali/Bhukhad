@@ -58,6 +58,13 @@ const Login = () => {
           console.log("Node Responce", responce);
           const { token} = responce.data;  
           sessionStorage.setItem('token',token)
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: 'Login Success',
+            showConfirmButton: false,
+            timer: 1500
+          });
           navigate("/aboutus");
           
         } catch (error) {
