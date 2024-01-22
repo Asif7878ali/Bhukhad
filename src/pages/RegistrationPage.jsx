@@ -41,6 +41,7 @@ const RegistrationPage = () => {
   
     try {
       const registerUser = "http://localhost:7000/register";
+      //https://vast-tan-seagull-slip.cyclic.app/register
       const response = await axios.post(registerUser, formDataToSend);
       console.log("Node Response", response);
       const { message } = response.data;
@@ -72,7 +73,7 @@ const RegistrationPage = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      
+
       // Reset the form fields
       setFormData({
         username: "",

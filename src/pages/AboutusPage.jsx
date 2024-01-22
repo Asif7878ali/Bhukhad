@@ -20,6 +20,7 @@ const AboutusPage = () => {
 
   const verifyUser = async () => {
     const url = "http://localhost:7000/verify";
+    //https://vast-tan-seagull-slip.cyclic.app/verify
     try {
       const response = await axios.get(url, { headers });
     //   console.log(response.data);

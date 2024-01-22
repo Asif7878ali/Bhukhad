@@ -49,6 +49,7 @@ const AddtoCard = () => {
 
   const makePayment = async () => {
     try {
+      //https://vast-tan-seagull-slip.cyclic.app/checkout/session
       const responceSession = await axios.post( "http://localhost:7000/checkout/session" , carditems );
       console.log('grse',responceSession);
       console.log(responceSession.data.amount)
@@ -62,6 +63,7 @@ const AddtoCard = () => {
         "order_id":  responceSession.data.id,
         "handler": async function (response){
               try {
+                   //https://vast-tan-seagull-slip.cyclic.app/verify
                    const responceVerifySign =  await axios.post('http://localhost:7000/checkout/verify' , {responce : response} )
                    console.log(responceVerifySign)
                       navigate('/success')

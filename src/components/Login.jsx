@@ -54,6 +54,7 @@ const Login = () => {
          // send data to nodejs
          try {
           const url = "http://localhost:7000/login";
+            //https://vast-tan-seagull-slip.cyclic.app/login
           const responce = await axios.post(url, values);
           console.log("Node Responce", responce);
           const { token} = responce.data;  
