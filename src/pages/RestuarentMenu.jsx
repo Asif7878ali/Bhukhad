@@ -12,7 +12,7 @@ const RestuarentMenu = () => {
   const [search, setSearch] = useState("");
  
   const fetchData = async () => {      
-    const myApiData = "https://restuarent-list.onrender.com/restaurants";
+    const myApiData = "https://restuarent.onrender.com/restaurants";
     try {
       const responce = await axios.get(myApiData);
       setRestaurants(responce.data);

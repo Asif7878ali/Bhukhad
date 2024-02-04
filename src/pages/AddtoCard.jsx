@@ -49,8 +49,9 @@ const AddtoCard = () => {
 
   const makePayment = async () => {
     try {
+      //http://localhost:7000/checkout/session
       //https://vast-tan-seagull-slip.cyclic.app/checkout/session
-      const responceSession = await axios.post( "http://localhost:7000/checkout/session" , carditems );
+      const responceSession = await axios.post( "https://ruby-tricky-greyhound.cyclic.app/checkout/session" , carditems );
       console.log('grse',responceSession);
       console.log(responceSession.data.amount)
       var options = {
@@ -63,8 +64,9 @@ const AddtoCard = () => {
         "order_id":  responceSession.data.id,
         "handler": async function (response){
               try {
+                   //http://localhost:7000/checkout/verify
                    //https://vast-tan-seagull-slip.cyclic.app/verify
-                   const responceVerifySign =  await axios.post('http://localhost:7000/checkout/verify' , {responce : response} )
+                   const responceVerifySign =  await axios.post('https://ruby-tricky-greyhound.cyclic.app/checkout/verify' , {responce : response} )
                    console.log(responceVerifySign)
                       navigate('/success')
               } catch (error) {

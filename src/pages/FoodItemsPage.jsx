@@ -12,7 +12,7 @@ const FoodItemsPage = () => {
 
   const [specificRestua, setSpecificRestua] = useState([]);
   const fetchData = async () => {
-    const myApiData = `https://restuarent-list.onrender.com/restaurants/${id}`;
+    const myApiData = `https://restuarent.onrender.com/restaurants/${id}`;
     try {
       const responce = await axios.get(myApiData);
       setSpecificRestua(responce.data);
@@ -23,7 +23,8 @@ const FoodItemsPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, [id]);
+  });
+
   const {
     image,
     name,
