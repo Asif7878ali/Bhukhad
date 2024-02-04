@@ -39,7 +39,7 @@ const AboutusPage = () => {
   };
   useEffect(() => {
     verifyUser();
-  }, []);
+  });
 
   return (
     <>
