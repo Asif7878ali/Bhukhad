@@ -53,7 +53,7 @@ const Login = () => {
 
          // send data to nodejs
          try {
-          const url = "https://ruby-tricky-greyhound.cyclic.app/login";
+          const url = "http://localhost:7000/login";
             //https://ruby-tricky-greyhound.cyclic.app/login
             //http://localhost:7000/login
           const responce = await axios.post(url, values);
