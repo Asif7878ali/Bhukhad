@@ -40,8 +40,8 @@ const RegistrationPage = () => {
     }
   
     try {
-      const registerUser = "https://ruby-tricky-greyhound.cyclic.app/register";
-      //https://ruby-tricky-greyhound.cyclic.app/register
+      const registerUser = "https://bhukhadbackend-production.up.railway.app/register";
+     //https://bhukhadbackend-production.up.railway.app/register
       //http://localhost:7000/register
       const response = await axios.post(registerUser, formDataToSend);
       console.log("Node Response", response);
