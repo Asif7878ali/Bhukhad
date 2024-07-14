@@ -47,7 +47,7 @@ const RestuarentMenu = () => {
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto xl:px-24 p-4 bg-gradient-to-r">
-        <div className="lg:pt-48 pt-12 pb-5 flex flex-col items-center justify-center">
+        <div className="lg:pt-20 pt-12 pb-5 flex flex-col items-center justify-center">
           {/* content */}
           <div className="text-center px-4 space-y-7">
             <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
