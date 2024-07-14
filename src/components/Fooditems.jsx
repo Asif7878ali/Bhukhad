@@ -2,7 +2,6 @@ import foodItems from "../utils/foodItemsData";
 
 const Fooditems = () => {
   
-
   return (
     <>
       <div className="pl-20 mt-20">

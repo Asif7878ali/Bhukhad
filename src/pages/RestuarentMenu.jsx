@@ -60,16 +60,11 @@ const RestuarentMenu = () => {
               more...
             </p>
             <div className="justify-center items-center flex">
-              <input
-                className="w-full lg:w-[70rem] font-normal px-4 py-3 my-4 border border-gray-600 text-lg shadow-lg outline-none bg-gray-100 rounded-md"
-                placeholder="Search Restuerents..."
-                type="text"
-                value={search}
+              <input className="w-full lg:w-[70rem] font-normal px-4 py-3 my-4 border border-gray-600 text-lg shadow-lg outline-none bg-gray-100 rounded-md"  placeholder="Search Restuerents..." type="text" value={search}
                 onChange={(e) => {
                   setSearch(e.target.value);
                   setCurrentPage(1);
-                }}
-              />
+                }}/>
             </div>
           </div>
         </div>
@@ -88,24 +83,14 @@ const RestuarentMenu = () => {
           {/* cards */}
           <div className="pl-[5rem] lg:pl-[7rem] flex flex-wrap">
             {currentItems.map((restaurantItem) => (
-              <Link
-                to={"/fooditems/" + restaurantItem.id}
-                key={restaurantItem.id}
-              >
-                <RestuaCardsMap
-                  key={restaurantItem.id}
-                  restuarent={restaurantItem}
-                />
+              <Link to={"/fooditems/" + restaurantItem.id} key={restaurantItem.id}>
+                <RestuaCardsMap  key={restaurantItem.id} restuarent={restaurantItem} />
               </Link>
             ))}
           </div>
 
           {/* Pagination */}
-          <Pagination
-            itemsPerPage={itemsPerPage}
-            totalItems={filteredRestaurants.length}
-            paginate={paginate}
-          />
+          <Pagination itemsPerPage={itemsPerPage} totalItems={filteredRestaurants.length} paginate={paginate}/>
         </>
       )}
     </>
