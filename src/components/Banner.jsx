@@ -4,9 +4,9 @@ import khana from '../assets/Khana.png'
 const Banner = () => {
   return (
     <>
-      <div className="w-full lg:h-[40rem]">
+      <div className="w-full">
         <div className="lg:flex">
-          <div className="lg:w-[50%] lg:mt-52 lg:pl-20 pt-16 pl-8">
+          <div className="lg:w-[50%] lg:mt-28 lg:pl-20 pt-16 pl-8">
             <h1 className="text-4xl font-bold mb-3">Deep dive into Diligious Food from</h1>
             <h1 className="text-4xl font-bold text-red-600 mb-3">Khana-Kazana</h1>
             <p className="italic mb-5 sm:font-bold">
@@ -21,7 +21,7 @@ const Banner = () => {
   Order Now
 </button>
           </div>
-          <div className="lg:mt-36 lg:pl-14">
+          <div className="lg:mt-32 lg:pl-14">
             <img className="h-96" src={khana} alt="khana-kazana" />
           </div>
         </div>
