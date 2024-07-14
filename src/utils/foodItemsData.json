@@ -1,5 +1,4 @@
-export const data = {
-    "foodItems": [
+ [
         {
           "id": "aa",
           "name": "Misal pav",
@@ -61,4 +60,3 @@ export const data = {
           "image": "https://cdn.tasteatlas.com//Images/Dishes/4ecba690cc0b47809d43d70c7a6b3a39.jpg?w=905&h=510"
         }
       ]
-}
