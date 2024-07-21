@@ -40,8 +40,7 @@ const RegistrationPage = () => {
     }
   
     try {
-      const registerUser = "https://bhukhadbackend-production.up.railway.app/register";
-     //https://bhukhadbackend-production.up.railway.app/register
+      const registerUser = process.env.REACT_APP_REGISTERURL;
       //http://localhost:7000/register
       const response = await axios.post(registerUser, formDataToSend);
       console.log("Node Response", response);

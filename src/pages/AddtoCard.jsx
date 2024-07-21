@@ -50,8 +50,8 @@ const AddtoCard = () => {
   const makePayment = async () => {
     try {
       //http://localhost:7000/checkout/session
-       //https://bhukhadbackend-production.up.railway.app/session
-      const responceSession = await axios.post( "https://bhukhadbackend-production.up.railway.app/session" , carditems );
+       const session  = process.env.REACT_APP_PAYMENT_SESSION;
+      const responceSession = await axios.post( session , carditems );
       console.log('grse',responceSession);
       console.log(responceSession.data.amount)
       var options = {
@@ -65,8 +65,8 @@ const AddtoCard = () => {
         "handler": async function (response){
               try {
                    //http://localhost:7000/checkout/verify
-                  // https://bhukhadbackend-production.up.railway.app/verify
-                   const responceVerifySign =  await axios.post('https://bhukhadbackend-production.up.railway.app/verify' , {responce : response} )
+                  const verify = process.env.REACT_APP_PAYMENT_VERIFY;
+                   const responceVerifySign =  await axios.post(verify , {responce : response} )
                    console.log(responceVerifySign)
                       navigate('/success')
               } catch (error) {

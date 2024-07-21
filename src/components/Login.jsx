@@ -49,12 +49,9 @@ const Login = () => {
       validationSchema: regSchema,
       onSubmit: async (values, action) => {
         action.resetForm();
-        console.log("React Data", values);
-
          // send data to nodejs
          try {
-          const url = "https://bhukhadbackend-production.up.railway.app/login";
-          //https://bhukhadbackend-production.up.railway.app/login
+          const url = process.env.REACT_APP_LOGINURL;
             //http://localhost:7000/login
           const responce = await axios.post(url, values);
           console.log("Node Responce", responce);
