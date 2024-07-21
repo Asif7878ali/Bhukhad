@@ -3,6 +3,7 @@ import axios from "axios";
 import RestuaCardsMap from "../components/RestuaCardsMap";
 import Pagination from "../components/Pagination";
 import { Link } from "react-router-dom";
+import ShimmerUI from "../components/ShimmerUI";
 
 const RestuarentMenu = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -72,12 +73,7 @@ const RestuarentMenu = () => {
       {/* ml-20 lg:ml-[43rem] */}
       {/* cards */}
       {loading ? (
-        <div className="flex flex-col gap-4 w-52 ml-20 lg:ml-[43rem]">
-          <div className="skeleton h-32 w-full"></div>
-          <div className="skeleton h-4 w-28"></div>
-          <div className="skeleton h-4 w-full"></div>
-          <div className="skeleton h-4 w-full"></div>
-        </div>
+        <ShimmerUI/>
       ) : (
         <>
           {/* cards */}
