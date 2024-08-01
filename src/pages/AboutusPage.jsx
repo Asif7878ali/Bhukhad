@@ -20,6 +20,8 @@ const AboutusPage = () => {
 
   const verifyUser = async () => {
     const url = process.env.REACT_APP_USERS_VERIFY;
+    console.log(url);
+    console.log(token);
     //process.env.REACT_APP_USERS_VERIFY;
    //http://localhost:7000/verify
     try {
