@@ -19,8 +19,8 @@ const AboutusPage = () => {
   };
 
   const verifyUser = async () => {
-    const url = "http://localhost:7000/verify";
-    //https://vast-tan-seagull-slip.cyclic.app/verify
+    const url = process.env.REACT_APP_USERS_VERIFY;
+   //http://localhost:7000/verify
     try {
       const response = await axios.get(url, { headers });
     //   console.log(response.data);
