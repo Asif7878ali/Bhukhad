@@ -20,10 +20,11 @@ const AboutusPage = () => {
 
   const verifyUser = async () => {
     const url = process.env.REACT_APP_USERS_VERIFY;
+    //process.env.REACT_APP_USERS_VERIFY;
    //http://localhost:7000/verify
     try {
       const response = await axios.get(url, { headers });
-    //   console.log(response.data);
+      console.log(response.data);
       const { msg } = response.data;
       Swal.fire({
         position: "top-end",
