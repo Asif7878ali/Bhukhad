@@ -15,12 +15,12 @@ const UserProfile = () => {
        sessionStorage.removeItem('token')
        dispatch(clearUsers())
        navigate('/')
-       document.getElementById("my_modal_6").close()      
+       document.getElementById("my_modal").close()      
    }
 
   return (
     <>
-      <dialog id="my_modal_6" className="modal modal-middle sm:modal-middle">
+      <dialog id="my_modal" className="modal modal-middle sm:modal-middle">
         <div className="modal-box">
           <div className="modal-action flex flex-col justify-center mt-0">
             <div className="border-b px-4 pb-6">
